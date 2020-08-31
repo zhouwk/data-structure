@@ -61,6 +61,33 @@ class LinkedList<T>: CustomStringConvertible {
 
     }
     
+    /// 删除node
+    func delete(at index: UInt) {
+        if index >= size {
+            fatalError("\(index) out of bounds 0 ..< \(size)")
+        }
+        if size == 1 {
+            // head = tail的情况
+            head = nil
+            tail = nil
+        } else if index == 0 {
+            // 需要reset head
+            head = head?.next
+            tail?.next = head
+        } else {
+            let preNode = node(at: index - 1)
+            if index == size - 1 {
+                // 需要reset tail
+                preNode?.next = head
+                tail = preNode
+            } else {
+                // 中间节点
+                preNode?.next = preNode?.next?.next
+            }
+        }
+        size -= 1
+    }
+    
 
     func clear() {
         
@@ -99,6 +126,25 @@ class LinkedList<T>: CustomStringConvertible {
         return desc
     }
     let arrow = "  -->  "
+    
+    
+    /// 反转
+    func reverse() {
+        var newHead = head
+        var next: Node<T>?
+        var nextNext: Node<T>?
+        while newHead !== tail {
+            next = head?.next
+            nextNext = head?.next?.next
+            next?.next = newHead
+            newHead = next
+            head?.next = nextNext
+        }
+    
+        tail = head
+        head = newHead
+        tail?.next = head
+    }
 
 }
 

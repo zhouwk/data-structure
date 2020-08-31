@@ -23,8 +23,6 @@ class LinkedList<T> {
         if (head == nil) {
             head = node
         }
-        tail?.next = head
-        head?.prev = tail
         size += 1
     }
     

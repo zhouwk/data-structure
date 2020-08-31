@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F402027224F8AEA3007D5C93 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402027124F8AEA3007D5C93 /* main.swift */; };
-		F402027724F8AEBD007D5C93 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402027624F8AEBD007D5C93 /* LinkedList.swift */; };
-		F402027924F8AF05007D5C93 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402027824F8AF05007D5C93 /* Node.swift */; };
 		F402028424F8EC7D007D5C93 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402028324F8EC7D007D5C93 /* main.swift */; };
 		F402028924F8ED02007D5C93 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402028824F8ED02007D5C93 /* Node.swift */; };
 		F402028B24F8ED1C007D5C93 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402028A24F8ED1C007D5C93 /* LinkedList.swift */; };
@@ -17,6 +14,9 @@
 		F47A384524F7A97E0086D350 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A384424F7A97E0086D350 /* Node.swift */; };
 		F47A384724F7A9F40086D350 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A384624F7A9F40086D350 /* LinkedList.swift */; };
 		F4BC658024F6BF610047E6EA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC657F24F6BF610047E6EA /* main.swift */; };
+		F4BDCD6024FCA3230018FC08 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BDCD5F24FCA3230018FC08 /* main.swift */; };
+		F4BDCD6424FCA33B0018FC08 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402027624F8AEBD007D5C93 /* LinkedList.swift */; };
+		F4BDCD6524FCA33B0018FC08 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402027824F8AF05007D5C93 /* Node.swift */; };
 		F4CCB51724E11FF800091382 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CCB51624E11FF800091382 /* main.swift */; };
 		F4CCB51C24E1200C00091382 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CCB51B24E1200C00091382 /* Node.swift */; };
 		F4CCB51E24E120D000091382 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CCB51D24E120D000091382 /* LinkedList.swift */; };
@@ -24,24 +24,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F402026224F8AE83007D5C93 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-		F402026D24F8AEA3007D5C93 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
 		F402027F24F8EC7D007D5C93 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -61,6 +43,15 @@
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 		F4BC657B24F6BF610047E6EA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		F4BDCD5B24FCA3220018FC08 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -90,9 +81,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F402026424F8AE83007D5C93 /* 单项循环列表 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "单项循环列表"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F402026F24F8AEA3007D5C93 /* 单项循环链表 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "单项循环链表"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F402027124F8AEA3007D5C93 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F402027624F8AEBD007D5C93 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		F402027824F8AF05007D5C93 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		F402027C24F8E672007D5C93 /* todo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = todo.md; sourceTree = "<group>"; };
@@ -106,6 +94,8 @@
 		F47A384624F7A9F40086D350 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		F4BC657D24F6BF610047E6EA /* 双向链表 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "双向链表"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BC657F24F6BF610047E6EA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F4BDCD5D24FCA3220018FC08 /* 单向循环链表 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "单向循环链表"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4BDCD5F24FCA3230018FC08 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F4CCB51424E11FF800091382 /* LinkeList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LinkeList; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CCB51624E11FF800091382 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F4CCB51B24E1200C00091382 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
@@ -115,20 +105,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F402026124F8AE83007D5C93 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F402026C24F8AEA3007D5C93 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F402027E24F8EC7D007D5C93 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -144,6 +120,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F4BC657A24F6BF610047E6EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4BDCD5A24FCA3220018FC08 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -167,16 +150,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F402027024F8AEA3007D5C93 /* 单向循环链表 */ = {
-			isa = PBXGroup;
-			children = (
-				F402027124F8AEA3007D5C93 /* main.swift */,
-				F402027824F8AF05007D5C93 /* Node.swift */,
-				F402027624F8AEBD007D5C93 /* LinkedList.swift */,
-			);
-			path = "单向循环链表";
-			sourceTree = "<group>";
-		};
 		F402028224F8EC7D007D5C93 /* 双向循环链表 */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +178,16 @@
 			path = "双向链表";
 			sourceTree = "<group>";
 		};
+		F4BDCD5E24FCA3230018FC08 /* 单向循环链表 */ = {
+			isa = PBXGroup;
+			children = (
+				F402027824F8AF05007D5C93 /* Node.swift */,
+				F402027624F8AEBD007D5C93 /* LinkedList.swift */,
+				F4BDCD5F24FCA3230018FC08 /* main.swift */,
+			);
+			path = "单向循环链表";
+			sourceTree = "<group>";
+		};
 		F4CCB51524E11FF800091382 /* LinkeList */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,14 +201,14 @@
 		F4EA8D4424CFB6B400B232E9 = {
 			isa = PBXGroup;
 			children = (
-				F402027C24F8E672007D5C93 /* todo.md */,
 				F4EA8D4F24CFB6B400B232E9 /* 数据结构-codes-swift */,
+				F4BC657E24F6BF610047E6EA /* 双向链表 */,
+				F402028224F8EC7D007D5C93 /* 双向循环链表 */,
 				F41765C924CFC20F00C1F092 /* Fibonacci */,
 				F4CCB51524E11FF800091382 /* LinkeList */,
-				F4BC657E24F6BF610047E6EA /* 双向链表 */,
-				F402027024F8AEA3007D5C93 /* 单向循环链表 */,
-				F402028224F8EC7D007D5C93 /* 双向循环链表 */,
+				F4BDCD5E24FCA3230018FC08 /* 单向循环链表 */,
 				F4EA8D4E24CFB6B400B232E9 /* Products */,
+				F402027C24F8E672007D5C93 /* todo.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -236,9 +219,8 @@
 				F41765C824CFC20F00C1F092 /* Fibonacci */,
 				F4CCB51424E11FF800091382 /* LinkeList */,
 				F4BC657D24F6BF610047E6EA /* 双向链表 */,
-				F402026424F8AE83007D5C93 /* 单项循环列表 */,
-				F402026F24F8AEA3007D5C93 /* 单项循环链表 */,
 				F402028124F8EC7D007D5C93 /* 双向循环链表 */,
+				F4BDCD5D24FCA3220018FC08 /* 单向循环链表 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -254,40 +236,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F402026324F8AE83007D5C93 /* 单项循环列表 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F402026A24F8AE83007D5C93 /* Build configuration list for PBXNativeTarget "单项循环列表" */;
-			buildPhases = (
-				F402026024F8AE83007D5C93 /* Sources */,
-				F402026124F8AE83007D5C93 /* Frameworks */,
-				F402026224F8AE83007D5C93 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "单项循环列表";
-			productName = "单项循环列表";
-			productReference = F402026424F8AE83007D5C93 /* 单项循环列表 */;
-			productType = "com.apple.product-type.tool";
-		};
-		F402026E24F8AEA3007D5C93 /* 单项循环链表 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F402027324F8AEA3007D5C93 /* Build configuration list for PBXNativeTarget "单项循环链表" */;
-			buildPhases = (
-				F402026B24F8AEA3007D5C93 /* Sources */,
-				F402026C24F8AEA3007D5C93 /* Frameworks */,
-				F402026D24F8AEA3007D5C93 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "单项循环链表";
-			productName = "单项循环链表";
-			productReference = F402026F24F8AEA3007D5C93 /* 单项循环链表 */;
-			productType = "com.apple.product-type.tool";
-		};
 		F402028024F8EC7D007D5C93 /* 双向循环链表 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F402028524F8EC7D007D5C93 /* Build configuration list for PBXNativeTarget "双向循环链表" */;
@@ -339,6 +287,23 @@
 			productReference = F4BC657D24F6BF610047E6EA /* 双向链表 */;
 			productType = "com.apple.product-type.tool";
 		};
+		F4BDCD5C24FCA3220018FC08 /* 单向循环链表 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4BDCD6124FCA3230018FC08 /* Build configuration list for PBXNativeTarget "单向循环链表" */;
+			buildPhases = (
+				F4BDCD5924FCA3220018FC08 /* Sources */,
+				F4BDCD5A24FCA3220018FC08 /* Frameworks */,
+				F4BDCD5B24FCA3220018FC08 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "单向循环链表";
+			productName = "单向循环链表";
+			productReference = F4BDCD5D24FCA3220018FC08 /* 单向循环链表 */;
+			productType = "com.apple.product-type.tool";
+		};
 		F4CCB51324E11FF800091382 /* LinkeList */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4CCB51A24E11FF800091382 /* Build configuration list for PBXNativeTarget "LinkeList" */;
@@ -383,12 +348,6 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "周伟克";
 				TargetAttributes = {
-					F402026324F8AE83007D5C93 = {
-						CreatedOnToolsVersion = 11.3.1;
-					};
-					F402026E24F8AEA3007D5C93 = {
-						CreatedOnToolsVersion = 11.3.1;
-					};
 					F402028024F8EC7D007D5C93 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -396,6 +355,9 @@
 						CreatedOnToolsVersion = 11.3.1;
 					};
 					F4BC657C24F6BF610047E6EA = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					F4BDCD5C24FCA3220018FC08 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 					F4CCB51324E11FF800091382 = {
@@ -423,31 +385,13 @@
 				F41765C724CFC20F00C1F092 /* Fibonacci */,
 				F4CCB51324E11FF800091382 /* LinkeList */,
 				F4BC657C24F6BF610047E6EA /* 双向链表 */,
-				F402026324F8AE83007D5C93 /* 单项循环列表 */,
-				F402026E24F8AEA3007D5C93 /* 单项循环链表 */,
 				F402028024F8EC7D007D5C93 /* 双向循环链表 */,
+				F4BDCD5C24FCA3220018FC08 /* 单向循环链表 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F402026024F8AE83007D5C93 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F402026B24F8AEA3007D5C93 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F402027924F8AF05007D5C93 /* Node.swift in Sources */,
-				F402027724F8AEBD007D5C93 /* LinkedList.swift in Sources */,
-				F402027224F8AEA3007D5C93 /* main.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F402027D24F8EC7D007D5C93 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -476,6 +420,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F4BDCD5924FCA3220018FC08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4BDCD6524FCA33B0018FC08 /* Node.swift in Sources */,
+				F4BDCD6424FCA33B0018FC08 /* LinkedList.swift in Sources */,
+				F4BDCD6024FCA3230018FC08 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4CCB51024E11FF800091382 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -497,42 +451,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		F402026824F8AE83007D5C93 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		F402026924F8AE83007D5C93 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		F402027424F8AEA3007D5C93 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		F402027524F8AEA3007D5C93 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 		F402028624F8EC7D007D5C93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -579,6 +497,24 @@
 			name = Debug;
 		};
 		F4BC658224F6BF610047E6EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F4BDCD6224FCA3230018FC08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F4BDCD6324FCA3230018FC08 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -739,24 +675,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F402026A24F8AE83007D5C93 /* Build configuration list for PBXNativeTarget "单项循环列表" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F402026824F8AE83007D5C93 /* Debug */,
-				F402026924F8AE83007D5C93 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F402027324F8AEA3007D5C93 /* Build configuration list for PBXNativeTarget "单项循环链表" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F402027424F8AEA3007D5C93 /* Debug */,
-				F402027524F8AEA3007D5C93 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		F402028524F8EC7D007D5C93 /* Build configuration list for PBXNativeTarget "双向循环链表" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -780,6 +698,15 @@
 			buildConfigurations = (
 				F4BC658124F6BF610047E6EA /* Debug */,
 				F4BC658224F6BF610047E6EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4BDCD6124FCA3230018FC08 /* Build configuration list for PBXNativeTarget "单向循环链表" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4BDCD6224FCA3230018FC08 /* Debug */,
+				F4BDCD6324FCA3230018FC08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

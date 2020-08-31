@@ -9,7 +9,8 @@
 import Foundation
 
 class LinkedList<T> {
-    var size = 0
+    
+    var size = UInt(0)
     var head: Node<T>?
     var tail: Node<T>?
     
@@ -19,9 +20,15 @@ class LinkedList<T> {
         node.prev = tail
         tail?.next = node
         tail = node
-        if (head == nil) {
+        
+        if head == nil {
             head = node
         }
+        
+        // 建立环
+        head?.prev = node
+        node.next = head
+        
         size += 1
     }
     
@@ -78,9 +85,9 @@ class LinkedList<T> {
     /// 第index个节点
     func nodeAtIndex(_ index: UInt) -> Node<T>? {
         if index >= size {
-            return nil
+            fatalError("\(index) out of bounds 0 ..< \(size)")
         }
-        var cursor: Int
+        var cursor: UInt
         var node: Node<T>?
         if (index > size >> 1) {
             cursor = size - 1
@@ -101,6 +108,36 @@ class LinkedList<T> {
         return node
     }
 
+    
+    /// 反转
+    func reverse() {
+        var newHead = head
+        var next: Node<T>?
+        var nextNext: Node<T>?
+        while newHead !== tail {
+            next = head?.next
+            nextNext = head?.next?.next
+            next?.next = newHead
+            newHead?.prev = next
+            
+            newHead = next
+            
+            head?.next = nextNext
+            // 0 1 2 3
+            // 1 0 2 3
+            // 2 1 0 3
+            // 3 2 1 0
+            if newHead !== tail {
+                nextNext?.prev = head
+                // 当next ==== newHead === tail的时候 即（3 2 1 0），已经完成了反转，此时next = 3， nextNext = 0 即head， 于是出现了head.prev = head的情况
+            }
+        }
+        tail = head
+        head = newHead
+        head?.prev = tail
+        tail?.next = head
+    }
+    
     /// 从头结点开始遍历
     func travelFromHead() {
         if size == 0 {
@@ -109,41 +146,12 @@ class LinkedList<T> {
         }
         var node = head
         var str = ""
-        while node != nil {
+        repeat {
             str += "\(node!.value)" + arrow
             node = node?.next
-        }
+        } while node !== head
         str += "null"
         print(str)
-    }
-    
-    /// 反转
-    func reverse() {
-        var newHead = head
-        var next: Node<T>?
-        var nextNext: Node<T>?
-        while head?.next != nil {
-            
-            next = head?.next
-            nextNext = head?.next?.next
-            
-            next?.next = newHead
-            newHead?.prev = next
-            newHead = next
-//            newHead?.prev = nil // ①
-
-            
-            head?.next = nextNext
-            nextNext?.prev = head
-        }
-    
-        tail = head
-        
-        head = newHead
-        head?.prev = nil // ②
-        
-        // 由于newHead 的prev 并没有置空，所以从tail向head遍历的时候，会出现环的现象，
-        // 解决方法: newHead每次赋新值的时候，直接把newHead.prev 置nil， 或者在反转结束后再置空
     }
     
     /// 从尾结点开始遍历
@@ -154,10 +162,10 @@ class LinkedList<T> {
         }
         var node = tail
         var str = "null"
-        while node != nil {
+        repeat {
             str += arrow + "\(node!.value)"
             node = node?.prev
-        }
+        } while node !== tail
         print(str)
     }
     
