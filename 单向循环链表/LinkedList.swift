@@ -68,8 +68,7 @@ class LinkedList<T>: CustomStringConvertible {
         }
         if size == 1 {
             // head = tail的情况
-            head = nil
-            tail = nil
+            clear()
         } else if index == 0 {
             // 需要reset head
             head = head?.next

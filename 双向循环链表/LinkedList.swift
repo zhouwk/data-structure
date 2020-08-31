@@ -20,11 +20,7 @@ class LinkedList<T> {
         node.prev = tail
         tail?.next = node
         tail = node
-        
-        if head == nil {
-            head = node
-        }
-        
+        head = head ?? node
         // 建立环
         head?.prev = node
         node.next = head
@@ -35,27 +31,27 @@ class LinkedList<T> {
     /// 插入节点
     func insert(_ value: T, at index: UInt) {
         if index > size {
-            fatalError("\(index) out of bunds 0 ..< \(size)")
+            fatalError("\(index) out of bunds 0 ... \(size)")
+        }
+        if index == size {
+            append(value)
+            return
         }
         
-        let node = Node(value)
-        
-        if index == size {
-            tail?.next = node
-            node.prev = tail
-            tail = node
-            head = head ?? node
+        let newNode = Node(value)
+        if index == 0 {
+            newNode.next = head
+            head?.prev = newNode
+            head = newNode
+            tail?.next = head
+            head?.prev = tail
         } else {
-            let old = nodeAtIndex(index)
+            let old = node(at: index)
             let prev = old?.prev
-                
-            prev?.next = node
-            node.prev = prev
-            if prev == nil {
-                head = node
-            }
-            node.next = old
-            old?.prev = node
+            prev?.next = newNode
+            newNode.prev = prev
+            newNode.next = old
+            old?.prev = newNode
         }
         size += 1
     }
@@ -65,25 +61,27 @@ class LinkedList<T> {
         if index >= size {
             fatalError("\(index) out of bunds 0 ..< \(size)")
         }
-        let node = nodeAtIndex(index)
-        let prev = node?.prev
-        let next = node?.next
-        
-        prev?.next = next
-        next?.prev = prev
-        
-        if node === head {
-            head = next
+        if size == 1 {
+            clear()
+            return
         }
-        
-        if node === tail {
-            tail = prev
+        if index == 0 {
+            head = head?.next
+            tail?.next = head
+            head?.prev = tail
+        } else {
+            let target = node(at: index)
+            target?.prev?.next = target?.next
+            target?.next?.prev = target?.prev
+            if index == size - 1 {
+                tail = target?.prev
+            }
         }
         size -= 1
     }
     
     /// 第index个节点
-    func nodeAtIndex(_ index: UInt) -> Node<T>? {
+    func node(at index: UInt) -> Node<T>? {
         if index >= size {
             fatalError("\(index) out of bounds 0 ..< \(size)")
         }
@@ -179,6 +177,7 @@ class LinkedList<T> {
     
     
     func clear() {
+        head?.next = nil // next -> next -> next 形成环，next是强应用
         head = nil
         tail = nil
         size = 0
