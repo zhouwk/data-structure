@@ -9,23 +9,14 @@
 import Foundation
 
 class Node<T> {    
-    let element: T
+    let value: T
     var next: Node<T>? = nil
     
-    var last: Node<T>? {
-        var cursor: Node<T>? = self
-        while cursor?.next != nil {
-            if cursor?.next === self {  //避免环的出现导致死循环
-                return cursor
-            }
-            cursor = cursor?.next
-        }
-        return cursor
+    init(_ value: T) {
+        self.value = value
     }
     
-    
-    init(element: T) {
-        self.element = element
+    deinit {
+        print(value, "deinit")
     }
-    
 }

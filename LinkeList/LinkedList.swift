@@ -12,67 +12,77 @@ import Foundation
 
 class LinkedList<T: Comparable>: CustomStringConvertible {
     
-    private var first: Node<T>?
+    var head: Node<T>?
+    var tail: Node<T>?
+    var size = UInt(0)
     
-    /// 追加节点
-    func appendNode(_ element: T) {
-        let node = Node(element: element)
-        appendNode(node)
-    }
 
     /// 追加节点
-    func appendNode(_ node: Node<T>) {
-        if let last = first?.last {
-            last.next = node
-        } else {
-            first = node
-        }
-    }
-    
-    /// 插入节点T
-    func insertNode(_ element: T, at index: uint) {
-        insertNode(Node(element: element), at: index)
+    func apend(_ value: T) {
+        let node = Node(value)
+        tail?.next = node
+        tail = node
+        head = head ?? node
+        size += 1
     }
     
     /// 插入节点
-    func insertNode(_ node: Node<T>, at index: uint) {
+    func insert(_ value: T, at index: UInt) {
+        if index > size {
+            fatalError("\(index) out of bounds  0 ... \(size)")
+        }
+        if index == size {
+            apend(value)
+            return
+        }
+        let newNode = Node(value)
         if index == 0 {
-            node.last?.next = first
-            first = node
+            newNode.next = head
+            head = newNode
         } else {
-            let previous = nodeAtIndex(index - 1)
-            let current = previous?.next
-            previous?.next = node
-            node.last?.next = current
+            let prev = node(at: index - 1)
+            newNode.next = prev?.next
+            prev?.next = newNode
         }
+        size += 1
     }
     
     /// 删除节点
-    func deleteNodeAtIndex(_ index: uint) -> Node<T>? {
-        if (index == 0) {
-            let tempFirst = first
-            first = first?.next
-            return tempFirst
+    func delete(at index: UInt) {
+        if index >= size {
+            fatalError("\(index) out of bounds  0 ..< \(size)")
         }
-        let previous = nodeAtIndex(index - 1)
-        let current = previous?.next
-        previous?.next = current?.next
-        return current
+        if size == 1 {
+            clear()
+            return
+        }
+        if index == 0 {
+            head = head?.next
+        } else {
+            let prev = node(at: index - 1)
+            prev?.next = prev?.next?.next
+            if index == size - 1 {
+                tail = prev
+            }
+        }
+        size -= 1
     }
     
     /// 删除节点
-    func deleteNode(_ element: T) {
+    func deleteValue(_ value: T) {
         var node: Node<T>?
-        var cursor = first
-        first = nil
+        var cursor = head
+        head = nil
+        tail = nil
         while cursor != nil {
-            if cursor?.element != element {
+            if cursor?.value != value {
                 if node != nil {
                     node!.next = cursor
                 } else  {
-                    first = cursor
+                    head = cursor
                 }
                 node = cursor
+                tail = node
             } else {
                 node?.next = nil
             }
@@ -83,23 +93,23 @@ class LinkedList<T: Comparable>: CustomStringConvertible {
     /// 反转
     func reverse() {
         // 2 1 3 4 5
-        var newFirst = first
+        var newHead = head
         var next: Node<T>?
         var nextNext: Node<T>?
-        while first?.next != nil  {
-            next = first?.next
-            nextNext = first?.next?.next
-            next?.next = newFirst
-            first?.next = nextNext
-            newFirst = next
+        while head?.next != nil  {
+            next = head?.next
+            nextNext = head?.next?.next
+            next?.next = newHead
+            head?.next = nextNext
+            newHead = next
         }
-        first = newFirst
+        head = newHead
     }
     
     /// 是否包含环
     func containsLoop() -> Bool {
-        var slow = first?.next
-        var fast = first?.next?.next
+        var slow = head?.next
+        var fast = head?.next?.next
         while slow?.next != nil, fast?.next?.next != nil {
             if slow === fast {
                 return true
@@ -111,10 +121,9 @@ class LinkedList<T: Comparable>: CustomStringConvertible {
     }
     
     /// 第index个node
-    func nodeAtIndex(_ index: uint) -> Node<T>? {
-        var node = first
+    private func node(at index: UInt) -> Node<T>? {
+        var node = head
         for _ in 0 ..< index {
-            print("....")
             if node?.next == nil {
                 return nil
             }
@@ -124,16 +133,22 @@ class LinkedList<T: Comparable>: CustomStringConvertible {
     }
     
     var description: String {
-        guard let first = first else {
+        guard let head = head else {
             return "空链表"
         }
-        var node: Node<T>? = first
+        var node: Node<T>? = head
         var desc = ""
         while let tempNode = node {
-            desc += "\(tempNode.element)  ->  "
+            desc += "\(tempNode.value)  ->  "
             node = tempNode.next
         }
         desc += "null"
         return desc
+    }
+
+    func clear() {
+        head = nil
+        tail = nil
+        size = 0
     }
 }
