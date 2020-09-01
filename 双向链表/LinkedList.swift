@@ -32,9 +32,14 @@ class LinkedList<T> {
             fatalError("\(index) out of bunds 0 ..< \(size)")
         }
         
+        if (index == size) {
+            append(value)
+            return
+        }
+        
         let newNode = Node(value)
         
-        if index == size {
+        if index == 0 {
             tail?.next = newNode
             newNode.prev = tail
             tail = newNode
@@ -45,9 +50,7 @@ class LinkedList<T> {
                 
             prev?.next = newNode
             newNode.prev = prev
-            if prev == nil {
-                head = newNode
-            }
+           
             newNode.next = old
             old?.prev = newNode
         }
