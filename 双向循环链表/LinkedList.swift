@@ -117,19 +117,17 @@ class LinkedList<T> {
             nextNext = head?.next?.next
             next?.next = newHead
             newHead?.prev = next
-            
-            newHead = next
-            
-            head?.next = nextNext
-            // 0 1 2 3
-            // 1 0 2 3
-            // 2 1 0 3
-            // 3 2 1 0
-            if newHead !== tail {
-                nextNext?.prev = head
-                // 当next ==== newHead === tail的时候 即（3 2 1 0），已经完成了反转，此时next = 3， nextNext = 0 即head， 于是出现了head.prev = head的情况
-            }
+            newHead = next //①
+            head?.next = nextNext //②
         }
+        /**
+         * 假如原链表为0 1 2 3 4，0是head，4是tail
+         * while之后为4 3 2 1 0，但是 4的prev是3，0的next是0
+         * 因为从3 2 1 0 4开始反转的时候，nextNext就是4的next，即为0，
+         * ②处的代码的实际效果是head.next = head，
+         * ①把4作为newHead的时候，退出while循环没有重新设置4的prev
+         * 4依然保留了之前的prev，即使3
+         */
         tail = head
         head = newHead
         head?.prev = tail
