@@ -26,7 +26,7 @@ func testBrackts(in source: String) -> Bool {
             }
         }
     }
-    return stack.top == nil
+    return stack.size == 0
 }
 
 print(testBrackts(in: "]{{{{{{}}}}}}"))

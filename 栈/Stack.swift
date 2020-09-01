@@ -16,7 +16,7 @@ import Foundation
 
 class Stack<T> {
     var top: T? { elements.last }
-    private(set) var size = 0
+    var size: Int { elements.count }
     private var elements = [T]()
     
     func push(_ value: T) {
