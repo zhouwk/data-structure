@@ -77,11 +77,14 @@ class LinkedList<T: Comparable>: CustomStringConvertible {
         while cursor != nil {
             if cursor?.value != value {
                 if node != nil {
+                    // node.next指向最新遍历到的不等于value的节点，中间遍历到的等于value节点也就删除了
                     node!.next = cursor
                 } else  {
+                    // 遍历到第一个不等于value的节点，重新设置head
                     head = cursor
                 }
                 node = cursor
+                // 更新tail为最新遍历的不等于value的节点
                 tail = node
             } else {
                 node?.next = nil
@@ -92,7 +95,6 @@ class LinkedList<T: Comparable>: CustomStringConvertible {
     
     /// 反转
     func reverse() {
-        // 2 1 3 4 5
         var newHead = head
         var next: Node<T>?
         var nextNext: Node<T>?
@@ -103,6 +105,7 @@ class LinkedList<T: Comparable>: CustomStringConvertible {
             head?.next = nextNext
             newHead = next
         }
+        tail = head
         head = newHead
     }
     
@@ -122,6 +125,9 @@ class LinkedList<T: Comparable>: CustomStringConvertible {
     
     /// 第index个node
     private func node(at index: UInt) -> Node<T>? {
+        if (index >= size) {
+            fatalError("\(index) out of bounds 0 ..< \(size)")
+        }
         var node = head
         for _ in 0 ..< index {
             if node?.next == nil {

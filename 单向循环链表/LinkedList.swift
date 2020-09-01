@@ -24,7 +24,22 @@ class LinkedList<T>: CustomStringConvertible {
     var head: Node<T>?
     var tail: Node<T>?
     
-    /// 在任意位置插入
+    
+    /// 追加节点
+    func append(_ value: T) {
+        let newNode = Node(value)
+        tail?.next = newNode
+        
+        tail = newNode
+        head = head ?? newNode
+        
+        newNode.next = head
+        
+        size += 1
+
+    }
+    
+    /// 插入节点
     func insert(_ value: T, at index: UInt) {
         if index > size {
             fatalError("\(index) out of bounds 0 ... size")
@@ -47,21 +62,7 @@ class LinkedList<T>: CustomStringConvertible {
         size += 1
     }
     
-    /// 追加node
-    func append(_ value: T) {
-        let newNode = Node(value)
-        tail?.next = newNode
-        
-        tail = newNode
-        head = head ?? newNode
-        
-        newNode.next = head
-        
-        size += 1
-
-    }
-    
-    /// 删除node
+    /// 删除节点
     func delete(at index: UInt) {
         if index >= size {
             fatalError("\(index) out of bounds 0 ..< \(size)")

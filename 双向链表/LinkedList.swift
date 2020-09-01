@@ -32,54 +32,60 @@ class LinkedList<T> {
             fatalError("\(index) out of bunds 0 ..< \(size)")
         }
         
-        let node = Node(value)
+        let newNode = Node(value)
         
         if index == size {
-            tail?.next = node
-            node.prev = tail
-            tail = node
-            head = head ?? node
+            tail?.next = newNode
+            newNode.prev = tail
+            tail = newNode
+            head = head ?? newNode
         } else {
-            let old = nodeAtIndex(index)
+            let old = node(at: index)
             let prev = old?.prev
                 
-            prev?.next = node
-            node.prev = prev
+            prev?.next = newNode
+            newNode.prev = prev
             if prev == nil {
-                head = node
+                head = newNode
             }
-            node.next = old
-            old?.prev = node
+            newNode.next = old
+            old?.prev = newNode
         }
         size += 1
     }
     
     /// 删除对应位置的节点
-    func deleteNode(at index: UInt) {
+    func delete(at index: UInt) {
         if index >= size {
             fatalError("\(index) out of bunds 0 ..< \(size)")
         }
-        let node = nodeAtIndex(index)
-        let prev = node?.prev
-        let next = node?.next
-        
-        prev?.next = next
-        next?.prev = prev
-        
-        if node === head {
-            head = next
+        if size == 1 {
+            clear()
+            return
         }
-        
-        if node === tail {
-            tail = prev
+        if index == 0 {
+            head = head?.next
+            head?.prev = nil
+        } else {
+            let target = node(at: index)
+            let prev = target?.prev
+            let next = target?.next
+            
+            prev?.next = next
+            next?.prev = prev
+            
+            if target === tail {
+                tail = prev
+            }
+
         }
         size -= 1 
     }
     
     /// 第index个节点
-    func nodeAtIndex(_ index: UInt) -> Node<T>? {
+    func node(at index: UInt) -> Node<T>? {
         if index >= size {
-            return nil
+            fatalError("\(index) out of bounds 0 ..< \(size)")
         }
         var cursor: Int
         var node: Node<T>?

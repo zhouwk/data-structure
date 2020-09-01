@@ -67,6 +67,16 @@ print(list.containsLoop())
 
 
 
+print("---------反转---------")
+list.clear()
+list.apend(0)
+list.apend(1)
+list.reverse()
+print(list.tail?.value)
+
+
+
+
 
 
 

@@ -56,10 +56,10 @@ list.append(1)
 list.append(2)
 list.append(3)
 
-list.deleteNode(at: 0) // 1 2 3
-list.deleteNode(at: 2) // 1 2
-list.deleteNode(at: 1) // 1
-list.deleteNode(at: 0) // empty
+list.delete(at: 0) // 1 2 3
+list.delete(at: 2) // 1 2
+list.delete(at: 1) // 1
+list.delete(at: 0) // empty
 list.travelFromHead() //
 list.travelFromTail()
 
