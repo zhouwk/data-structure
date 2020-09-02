@@ -31,4 +31,3 @@ func testBrackts(in source: String) -> Bool {
 
 print(testBrackts(in: "]{{{{{{}}}}}}"))
 
-
