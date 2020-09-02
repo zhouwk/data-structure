@@ -20,6 +20,6 @@ class Node<T> {
     
     
     deinit {
-        print(value, "deinit")
+//        print(value, "deinit")
     }
 }
