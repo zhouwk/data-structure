@@ -51,32 +51,32 @@ print(list)
 
 print("------约瑟夫环(猴子王)-------")
 
-func monkeyKing(total: Int, step: Int) -> Int {
-    assert(total > 1)
-    assert(step > 0)
-    if step == 1 {
-        return total
+func monkeyKing(m: Int, n: Int) -> Int {
+    assert(m > 1)
+    assert(n > 0)
+    if n == 1 {
+        return m
     }
     let list = LinkedList<Int>()
-    for monkey in 1 ... total {
+    for monkey in 1 ... m {
         list.append(monkey)
     }
     // 需要定位到将要删除节点的前一个节点
-    var node = list.head!
+    var cursor = list.head!
     var removed: Node<Int>
-    let range = 1 ..< step - 1
+    let range = 1 ..< n - 1
     while list.size > 1 {
         for _ in range {
-            node = node.next!
+            cursor = cursor.next!
         }
-        removed = node.next!
-        node.next = removed.next
-        node = removed.next!
+        removed = cursor.next!
+        cursor.next = removed.next
+        cursor = removed.next!
         list.size -= 1
         print("out: \(removed.value)")
     }
-    return node.value
+    return cursor.value
 }
-print("king is", monkeyKing(total: 6, step: 5))
+print("king is", monkeyKing(m: 6, n: 5))
 print("----------------")
-print("king is", monkeyKing(total: 8, step: 3))
+print("king is", monkeyKing(m: 8, n: 3))
