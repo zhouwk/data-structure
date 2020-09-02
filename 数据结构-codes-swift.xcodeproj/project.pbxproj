@@ -17,7 +17,7 @@
 		F47A384524F7A97E0086D350 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A384424F7A97E0086D350 /* Node.swift */; };
 		F47A384724F7A9F40086D350 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A384624F7A9F40086D350 /* LinkedList.swift */; };
 		F4B8FA4C24FF62740015ADA3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8FA4B24FF62740015ADA3 /* main.swift */; };
-		F4B8FA5124FF62A30015ADA3 /* FixedCapacityArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8FA5024FF62A30015ADA3 /* FixedCapacityArray.swift */; };
+		F4B8FA5324FF79AC0015ADA3 /* CustomArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8FA5224FF79AC0015ADA3 /* CustomArray.swift */; };
 		F4BC658024F6BF610047E6EA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC657F24F6BF610047E6EA /* main.swift */; };
 		F4BDCD6024FCA3230018FC08 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BDCD5F24FCA3230018FC08 /* main.swift */; };
 		F4BDCD6424FCA33B0018FC08 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402027624F8AEBD007D5C93 /* LinkedList.swift */; };
@@ -132,7 +132,7 @@
 		F47A384624F7A9F40086D350 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		F4B8FA4924FF62740015ADA3 /* 数组 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "数组"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B8FA4B24FF62740015ADA3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		F4B8FA5024FF62A30015ADA3 /* FixedCapacityArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedCapacityArray.swift; sourceTree = "<group>"; };
+		F4B8FA5224FF79AC0015ADA3 /* CustomArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomArray.swift; sourceTree = "<group>"; };
 		F4BC657D24F6BF610047E6EA /* 双向链表 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "双向链表"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BC657F24F6BF610047E6EA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F4BDCD5D24FCA3220018FC08 /* 单向循环链表 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "单向循环链表"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,7 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				F4B8FA4B24FF62740015ADA3 /* main.swift */,
-				F4B8FA5024FF62A30015ADA3 /* FixedCapacityArray.swift */,
+				F4B8FA5224FF79AC0015ADA3 /* CustomArray.swift */,
 			);
 			path = "数组";
 			sourceTree = "<group>";
@@ -586,8 +586,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4B8FA5124FF62A30015ADA3 /* FixedCapacityArray.swift in Sources */,
 				F4B8FA4C24FF62740015ADA3 /* main.swift in Sources */,
+				F4B8FA5324FF79AC0015ADA3 /* CustomArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

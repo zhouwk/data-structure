@@ -16,21 +16,37 @@ struct Person {
 }
 
 
-// 0 1 2 3 4 5
+
 
 
 func test() {
-    let arr = FixedCapacityArray<Person>.init(capacity: 0)
-    arr.add(.init(0))
-    arr.add(.init(1))
-    arr.add(.init(2))
-    arr.add(.init(3))
-    arr.add(.init(4))
+//    let arr = FixedCapacityArray<Person>.init(capacity: 0)
+//    arr.add(.init(0))
+//    arr.add(.init(1))
+//    arr.add(.init(2))
+//    arr.add(.init(3))
+//    arr.add(.init(4))
+//
+//
+//    print(arr[0].id)
+//    print(arr[1].id)
+//    print(arr[2].id)
     
     
-    print(arr[0].id)
-    print(arr[1].id)
-    print(arr[2].id)
+//    let arr = CustomArray<Int>.init(capacity: 0)
+//    arr.insert(0, at: 0)
+//    arr.insert(1, at: 0)
+//    arr.insert(2, at: 0)
+//    arr.insert(3, at: 3)
+//    arr.insert(4, at: 3)
+    
+    
+    let arr =  CustomArray(arrayLiteral: 1, 2, 3, 4)
+
+    print(arr)
+    
+    arr.removeLast()
+    print(arr)
 }
 
 
