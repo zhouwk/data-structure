@@ -19,17 +19,9 @@ queue.enQueue(3)
 
 
 
-print(queue.deQueue())
-print(queue.deQueue())
-print(queue.deQueue())
-print(queue.deQueue())
-print(queue.deQueue())
 
 
 
-queue.enQueue(5)
-print("head", queue.head?.value)
-print("tail", queue.tail?.value)
 
 
 

@@ -13,31 +13,17 @@ import Foundation
 
 class Queue<T> {
 
-    var head: Node<T>?
-    var tail: Node<T>?
+    var head: T? { list.head?.value }
+    var tail: T? { list.tail?.value }
+    var size: UInt { list.size }
+    private let list = LinkedList<T>()
     
     /// 入队
     func enQueue(_ value: T) {
-        let node = Node(value)
-        tail?.next = node
-        node.prev = tail
-        tail = node
-        
-        if head == nil {
-            head = node
-        }
+        list.append(value)
     }
-    
     /// 出队
     func deQueue() -> T? {
-        if head == nil {
-            return nil
-        }
-        let removed = head?.value
-        head = head?.next
-        if head == nil {
-            tail = nil
-        }
-        return removed
+        list.size == 0 ? nil : list.deleteNode(at: list.size - 1).value
     }
 }
