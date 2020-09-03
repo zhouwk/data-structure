@@ -27,10 +27,12 @@ class Queue<T>: CustomStringConvertible {
         list.insert(value, at: 0)
     }
     /// 队首出队
+    @discardableResult
     func deQueueAtHead() -> T? {
         list.size == 0 ? nil : list.deleteNode(at: 0).value
     }
     /// 队尾出队
+    @discardableResult
     func deQueueAtTail() -> T? {
         list.size == 0 ? nil : list.deleteNode(at: list.size - 1).value
     }

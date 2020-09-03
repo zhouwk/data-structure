@@ -8,5 +8,20 @@
 
 import Foundation
 
-print("Hello, World!")
 
+
+let queue = Queue<Int>()
+queue.enQueueAtHead(0) // 0
+queue.enQueueAtHead(1) // 1 0
+queue.enQueueAtHead(2) // 2 1 0
+queue.enQueueAtTail(3) // 2 1 0 3
+queue.enQueueAtTail(4) // 2 1 0 3 4
+queue.deQueueAtHead() //  1 0 3 4
+queue.deQueueAtTail() //  1 0 3
+queue.deQueueAtHead() //  0 3
+queue.deQueueAtTail() //  0
+queue.deQueueAtTail()
+print(queue)
+print(queue.head)
+print(queue.tail)
+print(queue.size)
