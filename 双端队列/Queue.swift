@@ -18,20 +18,27 @@ class Queue<T>: CustomStringConvertible {
     var size: UInt { list.size }
     private let list = LinkedList<T>()
     
-    /// 入队
-    func enQueue(_ value: T) {
+    /// 队尾入队
+    func enQueueAtTail(_ value: T) {
         list.append(value)
     }
-    /// 出队
-    func deQueue() -> T? {
+    /// 队首入队
+    func enQueueAtHead(_ value: T) {
+        list.insert(value, at: 0)
+    }
+    /// 队首出队
+    func deQueueAtHead() -> T? {
         list.size == 0 ? nil : list.deleteNode(at: 0).value
     }
+    /// 队尾出队
+    func deQueueAtTail() -> T? {
+        list.size == 0 ? nil : list.deleteNode(at: list.size - 1).value
+    }
+    
     /// 清空队列
     func clear() {
         list.clear()
     }
-    
-    
     var description: String {
         
         if size == 0 {
@@ -48,4 +55,5 @@ class Queue<T>: CustomStringConvertible {
         } while node !== list.head
         return str
     }
+
 }

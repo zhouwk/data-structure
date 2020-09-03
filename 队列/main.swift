@@ -18,6 +18,19 @@ queue.enQueue(2)
 queue.enQueue(3)
 
 
+print(queue)
+
+queue.deQueue()
+queue.deQueue()
+queue.deQueue()
+queue.deQueue()
+
+print(queue)
+
+
+
+
+
 
 
 
