@@ -15,6 +15,21 @@ var treeNodes = ["0", "1", "3", EOT, EOT, "4", EOT, "7", EOT, EOT, "2",
                  EOT, EOT]
 
 
-if let root = BiTree().createBiTree(using: treeNodes) {
-    print(root.rChild?.rChild?.rChild?.rChild?.value)
+let tree = BiTree()
+if let root = tree.createBiTree(using: treeNodes) {
+//    print("---------前序(递归)--------")
+//    tree.preOrderTravelRecursively(node: root)
+//    print("\n---------前序(栈)--------")
+//    tree.preOrderTravelUsingStack()
+//    print("\n---------中序(递归)--------")
+//    tree.inOrderTravelRecursively(node: root)
+//    print("\n---------中序(栈)--------")
+//    tree.inOrderTravelUsingStack()
+
+    print("\n---------后序--------")
+    tree.postOrderTravelRecursively(node: root)
+    print("\n---------后序(栈)--------")
+    tree.postOrderTravelUsingStack()
+
+
 }
