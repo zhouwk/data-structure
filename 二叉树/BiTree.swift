@@ -122,9 +122,23 @@ class BiTree {
     }
     
     
-    /// 层序遍历(使用栈)
-    func levelOrderTravelUsingStack() {
-        
+    /// 层序遍历(使用队列)
+    func levelOrderTravelUsingQueue() {
+        guard let root = root else {
+            return
+        }
+        let queue = Queue<Node>()
+        queue.enQueue(root)
+        while queue.head != nil {
+            print(queue.head!.value, terminator: terminator)
+            if queue.head!.lChild != nil {
+                queue.enQueue(queue.head!.lChild!)
+            }
+            if queue.head!.rChild != nil {
+                queue.enQueue(queue.head!.rChild!)
+            }
+            _ = queue.deQueue()
+        }
     }
     
     let terminator = "   "

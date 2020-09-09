@@ -18,6 +18,9 @@
 		F465E7E2250083E1009E75D0 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465E7DF250083E1009E75D0 /* Node.swift */; };
 		F465E7E3250083E1009E75D0 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465E7E0250083E1009E75D0 /* LinkedList.swift */; };
 		F465E7E4250083E1009E75D0 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465E7E1250083E1009E75D0 /* Queue.swift */; };
+		F46D53572508CCA9000F43C0 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46D53562508CCA9000F43C0 /* Queue.swift */; };
+		F46D535A2508CD6A000F43C0 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46D53592508CD6A000F43C0 /* LinkedList.swift */; };
+		F46D535C2508CD7D000F43C0 /* LinkedNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46D535B2508CD7D000F43C0 /* LinkedNode.swift */; };
 		F47A384524F7A97E0086D350 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A384424F7A97E0086D350 /* Node.swift */; };
 		F47A384724F7A9F40086D350 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A384624F7A9F40086D350 /* LinkedList.swift */; };
 		F486A66125072EB000C5480C /* BiTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486A66025072EB000C5480C /* BiTree.swift */; };
@@ -181,6 +184,9 @@
 		F465E7DF250083E1009E75D0 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		F465E7E0250083E1009E75D0 /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		F465E7E1250083E1009E75D0 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		F46D53562508CCA9000F43C0 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		F46D53592508CD6A000F43C0 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		F46D535B2508CD7D000F43C0 /* LinkedNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedNode.swift; sourceTree = "<group>"; };
 		F47A384424F7A97E0086D350 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		F47A384624F7A9F40086D350 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		F486A66025072EB000C5480C /* BiTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiTree.swift; sourceTree = "<group>"; };
@@ -199,7 +205,7 @@
 		F4C7F2C32505D2EA00E1630A /* 二叉树 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "二叉树"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C7F2C52505D2EA00E1630A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F4C7F2CA2505D39E00E1630A /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
-		F4CCB51424E11FF800091382 /* LinkeList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LinkeList; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4CCB51424E11FF800091382 /* LinkedList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LinkedList; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CCB51624E11FF800091382 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F4CCB51B24E1200C00091382 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		F4CCB51D24E120D000091382 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
@@ -345,6 +351,16 @@
 			path = "双端队列";
 			sourceTree = "<group>";
 		};
+		F46D53582508CCFC000F43C0 /* 队列 */ = {
+			isa = PBXGroup;
+			children = (
+				F46D53562508CCA9000F43C0 /* Queue.swift */,
+				F46D53592508CD6A000F43C0 /* LinkedList.swift */,
+				F46D535B2508CD7D000F43C0 /* LinkedNode.swift */,
+			);
+			path = "队列";
+			sourceTree = "<group>";
+		};
 		F48FFE5D2501D5810052ED55 /* 搜索二叉树 */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,6 +402,7 @@
 		F4C7F2C42505D2EA00E1630A /* 二叉树 */ = {
 			isa = PBXGroup;
 			children = (
+				F46D53582508CCFC000F43C0 /* 队列 */,
 				F4C7F2C52505D2EA00E1630A /* main.swift */,
 				F4C7F2CA2505D39E00E1630A /* Node.swift */,
 				F486A66025072EB000C5480C /* BiTree.swift */,
@@ -394,14 +411,14 @@
 			path = "二叉树";
 			sourceTree = "<group>";
 		};
-		F4CCB51524E11FF800091382 /* LinkeList */ = {
+		F4CCB51524E11FF800091382 /* LinkedList */ = {
 			isa = PBXGroup;
 			children = (
 				F4CCB51624E11FF800091382 /* main.swift */,
 				F4CCB51B24E1200C00091382 /* Node.swift */,
 				F4CCB51D24E120D000091382 /* LinkedList.swift */,
 			);
-			path = LinkeList;
+			path = LinkedList;
 			sourceTree = "<group>";
 		};
 		F4EA8D4424CFB6B400B232E9 = {
@@ -411,7 +428,7 @@
 				F4BC657E24F6BF610047E6EA /* 双向链表 */,
 				F402028224F8EC7D007D5C93 /* 双向循环链表 */,
 				F41765C924CFC20F00C1F092 /* Fibonacci */,
-				F4CCB51524E11FF800091382 /* LinkeList */,
+				F4CCB51524E11FF800091382 /* LinkedList */,
 				F4BDCD5E24FCA3230018FC08 /* 单向循环链表 */,
 				F4EB30F224FDD4F600168088 /* 栈 */,
 				F426416924FDE46A00A0C341 /* 队列 */,
@@ -429,7 +446,7 @@
 			children = (
 				F4EA8D4D24CFB6B400B232E9 /* 数据结构-codes-swift */,
 				F41765C824CFC20F00C1F092 /* Fibonacci */,
-				F4CCB51424E11FF800091382 /* LinkeList */,
+				F4CCB51424E11FF800091382 /* LinkedList */,
 				F4BC657D24F6BF610047E6EA /* 双向链表 */,
 				F402028124F8EC7D007D5C93 /* 双向循环链表 */,
 				F4BDCD5D24FCA3220018FC08 /* 单向循环链表 */,
@@ -634,9 +651,9 @@
 			productReference = F4C7F2C32505D2EA00E1630A /* 二叉树 */;
 			productType = "com.apple.product-type.tool";
 		};
-		F4CCB51324E11FF800091382 /* LinkeList */ = {
+		F4CCB51324E11FF800091382 /* LinkedList */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F4CCB51A24E11FF800091382 /* Build configuration list for PBXNativeTarget "LinkeList" */;
+			buildConfigurationList = F4CCB51A24E11FF800091382 /* Build configuration list for PBXNativeTarget "LinkedList" */;
 			buildPhases = (
 				F4CCB51024E11FF800091382 /* Sources */,
 				F4CCB51124E11FF800091382 /* Frameworks */,
@@ -646,9 +663,9 @@
 			);
 			dependencies = (
 			);
-			name = LinkeList;
+			name = LinkedList;
 			productName = LinkeList;
-			productReference = F4CCB51424E11FF800091382 /* LinkeList */;
+			productReference = F4CCB51424E11FF800091382 /* LinkedList */;
 			productType = "com.apple.product-type.tool";
 		};
 		F4EA8D4C24CFB6B400B232E9 /* 数据结构-codes-swift */ = {
@@ -751,7 +768,7 @@
 			targets = (
 				F4EA8D4C24CFB6B400B232E9 /* 数据结构-codes-swift */,
 				F41765C724CFC20F00C1F092 /* Fibonacci */,
-				F4CCB51324E11FF800091382 /* LinkeList */,
+				F4CCB51324E11FF800091382 /* LinkedList */,
 				F4BC657C24F6BF610047E6EA /* 双向链表 */,
 				F402028024F8EC7D007D5C93 /* 双向循环链表 */,
 				F4BDCD5C24FCA3220018FC08 /* 单向循环链表 */,
@@ -856,6 +873,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F46D535A2508CD6A000F43C0 /* LinkedList.swift in Sources */,
+				F46D535C2508CD7D000F43C0 /* LinkedNode.swift in Sources */,
+				F46D53572508CCA9000F43C0 /* Queue.swift in Sources */,
 				F486A6692507790B00C5480C /* Stack.swift in Sources */,
 				F4C7F2C62505D2EA00E1630A /* main.swift in Sources */,
 				F4C7F2CB2505D39E00E1630A /* Node.swift in Sources */,
@@ -1333,7 +1353,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F4CCB51A24E11FF800091382 /* Build configuration list for PBXNativeTarget "LinkeList" */ = {
+		F4CCB51A24E11FF800091382 /* Build configuration list for PBXNativeTarget "LinkedList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F4CCB51824E11FF800091382 /* Debug */,

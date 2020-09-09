@@ -37,4 +37,3 @@ print(MemoryLayout<TestEnum>.alignment)
 
 let a: Int? = nil
 let b: Int? = 2
-
