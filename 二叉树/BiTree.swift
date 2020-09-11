@@ -142,5 +142,19 @@ class BiTree {
     }
     
     let terminator = "   "
+    
+    
+    
+    var treeHeight: Int { nodeHeight(node: root) }
+    
+    
+    private func nodeHeight(node: Node?) -> Int {
+        guard let node = node else {
+            return 0
+        }
+        return max(nodeHeight(node: node.lChild),
+                   nodeHeight(node: node.rChild)) + 1
+    }
 }
+
 

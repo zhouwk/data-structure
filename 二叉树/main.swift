@@ -13,16 +13,16 @@ let EOT = "#"
 var treeNodes = ["0", "1", "3", EOT, EOT, "4", EOT, "7", EOT, EOT, "2",
                  "5", EOT, EOT, "6", EOT, "10", "11", EOT, "13", EOT, EOT, "12",
                  EOT, EOT]
+//
+//treeNodes = ["0", "1", "3", EOT, EOT, "4", "5", "7", EOT, EOT, "8", EOT, EOT,
+//             "6", EOT, EOT, "2", "9", EOT, EOT, "10", EOT, "12", EOT, EOT,]
 
-treeNodes = ["0", "1", "3", EOT, EOT, "4", "5", "7", EOT, EOT, "8", EOT, EOT,
-             "6", EOT, EOT, "2", "9", EOT, EOT, "10", EOT, "12", EOT, EOT,]
 
-
-treeNodes = ["0", "1", "3", "7", EOT, EOT, "8", "9", EOT, EOT, "10", EOT, "11",
-             EOT, EOT, "4", EOT, EOT, "2", "5", EOT, EOT, "6", "12", "14", "15",
-             EOT, EOT, EOT, EOT, "13", EOT, EOT]
-treeNodes = ["0", "99", EOT, "1", EOT, "2", EOT, "3", EOT, EOT, ]
-treeNodes = ["0", "1", "2", "3", EOT, EOT, EOT, EOT, EOT]
+//treeNodes = ["0", "1", "3", "7", EOT, EOT, "8", "9", EOT, EOT, "10", EOT, "11",
+//             EOT, EOT, "4", EOT, EOT, "2", "5", EOT, EOT, "6", "12", "14", "15",
+//             EOT, EOT, EOT, EOT, "13", EOT, EOT]
+//treeNodes = ["0", EOT, "1", EOT, "2", EOT, "3", EOT, EOT, ]
+//treeNodes = ["0", "1", "2", "3", EOT, EOT, EOT, EOT, EOT]
 
 
 let tree = BiTree()
@@ -44,6 +44,11 @@ if let root = tree.createBiTree(using: treeNodes) {
 
     print("\n---------层序遍历(队列)--------")
     tree.levelOrderTravelUsingQueue()
+    
+    print("\n---------树的高度--------")
+    print(tree.treeHeight)
+
+    
 
 
 }
