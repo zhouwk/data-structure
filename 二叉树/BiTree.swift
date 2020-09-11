@@ -144,16 +144,25 @@ class BiTree {
     let terminator = "   "
     
     
-    
+    // 树高度
     var treeHeight: Int { nodeHeight(node: root) }
     
-    
+    // 节点高度
     private func nodeHeight(node: Node?) -> Int {
         guard let node = node else {
             return 0
         }
         return max(nodeHeight(node: node.lChild),
                    nodeHeight(node: node.rChild)) + 1
+    }
+    
+    
+    // 反转(树的反转是指树中所有节点的左右子节点交换位置)
+    func reverse(node: Node?) {
+        guard let node = node else { return }
+        (node.lChild, node.rChild) = (node.rChild, node.lChild)
+        reverse(node: node.lChild)
+        reverse(node: node.rChild)
     }
 }
 
