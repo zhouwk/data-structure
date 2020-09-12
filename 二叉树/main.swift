@@ -64,3 +64,10 @@ if let root = tree.createBiTree(using: treeNodes) {
     tree.postOrderTravelUsingStack()
 
 }
+
+
+treeNodes = ["0", "1", "2", EOT, EOT, EOT, EOT]
+treeNodes = ["1", "2", EOT, EOT, "3", EOT, EOT]
+_ = tree.createBiTree(using: treeNodes)
+print("\n---------是否为完全二叉树--------")
+print(tree.isFullTree)

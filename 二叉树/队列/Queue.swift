@@ -24,6 +24,7 @@ class Queue<T>: CustomStringConvertible {
         list.append(value)
     }
     /// 出队
+    @discardableResult
     func deQueue() -> T? {
         list.size == 0 ? nil : list.deleteNode(at: 0).value
     }

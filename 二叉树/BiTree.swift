@@ -164,6 +164,37 @@ class BiTree {
         reverse(node: node.lChild)
         reverse(node: node.rChild)
     }
+    
+    /// 是否为完全二叉树
+    /// 如果遇到只有右子节点、无左子节点的节点，则不是一棵完全二叉树，终止遍历;如果遇到度为0或者只有只有左节点、无右子节点的节点，后序所有遍历的节点，必须全是叶子节点，否则不是完全二叉树，终止遍历;顺利遍历结束，则是一棵完全二叉树
+    var isFullTree: Bool {
+        guard let root = root else {
+            return false
+        }
+        let queue = Queue<Node>()
+        queue.enQueue(root)
+        
+        var mustBeLeaf = false
+        while queue.head != nil {
+            if !queue.head!.hasLChild, queue.head!.hasRChild {
+                return false
+            }
+            if mustBeLeaf, queue.head!.hasChild {
+                return false
+            }
+            if queue.head!.hasLChild {
+                queue.enQueue(queue.head!.lChild!)
+                if queue.head!.hasRChild {
+                    queue.enQueue(queue.head!.rChild!)
+                } else {
+                    mustBeLeaf = true
+                }
+            }
+            queue.deQueue()
+        }
+        return true
+ 
+    }
 }
 
 

@@ -20,3 +20,10 @@ class Node {
         self.value = value
     }
 }
+
+
+extension Node {
+    var hasLChild: Bool { lChild != nil }
+    var hasRChild: Bool { rChild != nil }
+    var hasChild: Bool { hasLChild || hasRChild }
+}
