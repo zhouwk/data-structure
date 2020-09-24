@@ -14,6 +14,14 @@
 		F426416B24FDE46A00A0C341 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F426416A24FDE46A00A0C341 /* main.swift */; };
 		F426417024FDE47D00A0C341 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F426416F24FDE47D00A0C341 /* Queue.swift */; };
 		F426417224FDE5F000A0C341 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = F426417124FDE5F000A0C341 /* Node.swift */; };
+		F464F039250F3445002F1BD2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464F038250F3445002F1BD2 /* main.swift */; };
+		F464F03E250F3552002F1BD2 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464F03D250F3552002F1BD2 /* Stack.swift */; };
+		F464F046250F36E5002F1BD2 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464F03F250F36E5002F1BD2 /* Node.swift */; };
+		F464F047250F36E5002F1BD2 /* LinkedNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464F041250F36E5002F1BD2 /* LinkedNode.swift */; };
+		F464F048250F36E5002F1BD2 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464F042250F36E5002F1BD2 /* Queue.swift */; };
+		F464F049250F36E5002F1BD2 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464F043250F36E5002F1BD2 /* LinkedList.swift */; };
+		F464F04A250F36E5002F1BD2 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464F044250F36E5002F1BD2 /* Stack.swift */; };
+		F464F04D250F3707002F1BD2 /* BiSearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464F04C250F3707002F1BD2 /* BiSearchTree.swift */; };
 		F465E7DB25008389009E75D0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465E7DA25008389009E75D0 /* main.swift */; };
 		F465E7E2250083E1009E75D0 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465E7DF250083E1009E75D0 /* Node.swift */; };
 		F465E7E3250083E1009E75D0 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465E7E0250083E1009E75D0 /* LinkedList.swift */; };
@@ -24,9 +32,6 @@
 		F47A384524F7A97E0086D350 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A384424F7A97E0086D350 /* Node.swift */; };
 		F47A384724F7A9F40086D350 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A384624F7A9F40086D350 /* LinkedList.swift */; };
 		F486A66125072EB000C5480C /* BiTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486A66025072EB000C5480C /* BiTree.swift */; };
-		F486A6692507790B00C5480C /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486A6682507790B00C5480C /* Stack.swift */; };
-		F48FFE5F2501D5810052ED55 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48FFE5E2501D5810052ED55 /* main.swift */; };
-		F48FFE642501D64D0052ED55 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48FFE632501D64D0052ED55 /* Node.swift */; };
 		F4B8FA4C24FF62740015ADA3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8FA4B24FF62740015ADA3 /* main.swift */; };
 		F4B8FA5324FF79AC0015ADA3 /* CustomArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8FA5224FF79AC0015ADA3 /* CustomArray.swift */; };
 		F4B8FA5524FF972E0015ADA3 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8FA5424FF972E0015ADA3 /* LinkedList.swift */; };
@@ -72,6 +77,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		F464F034250F3445002F1BD2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		F465E7CB2500834D009E75D0 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,15 +96,6 @@
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 		F465E7D625008389009E75D0 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-		F48FFE5A2501D5810052ED55 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -178,6 +183,15 @@
 		F426416A24FDE46A00A0C341 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F426416F24FDE47D00A0C341 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		F426417124FDE5F000A0C341 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		F464F036250F3445002F1BD2 /* 二叉排序树 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "二叉排序树"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F464F038250F3445002F1BD2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F464F03D250F3552002F1BD2 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		F464F03F250F36E5002F1BD2 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		F464F041250F36E5002F1BD2 /* LinkedNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedNode.swift; sourceTree = "<group>"; };
+		F464F042250F36E5002F1BD2 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		F464F043250F36E5002F1BD2 /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		F464F044250F36E5002F1BD2 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		F464F04C250F3707002F1BD2 /* BiSearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiSearchTree.swift; sourceTree = "<group>"; };
 		F465E7CD2500834D009E75D0 /* 双向队列 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "双向队列"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F465E7D825008389009E75D0 /* 双端队列 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "双端队列"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F465E7DA25008389009E75D0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -190,10 +204,6 @@
 		F47A384424F7A97E0086D350 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		F47A384624F7A9F40086D350 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		F486A66025072EB000C5480C /* BiTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiTree.swift; sourceTree = "<group>"; };
-		F486A6682507790B00C5480C /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
-		F48FFE5C2501D5810052ED55 /* 搜索二叉树 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "搜索二叉树"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F48FFE5E2501D5810052ED55 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		F48FFE632501D64D0052ED55 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		F4B8FA4924FF62740015ADA3 /* 数组 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "数组"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B8FA4B24FF62740015ADA3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F4B8FA5224FF79AC0015ADA3 /* CustomArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomArray.swift; sourceTree = "<group>"; };
@@ -238,6 +248,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F464F033250F3445002F1BD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F465E7CA2500834D009E75D0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -246,13 +263,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F465E7D525008389009E75D0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F48FFE592501D5810052ED55 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -340,6 +350,28 @@
 			path = "队列";
 			sourceTree = "<group>";
 		};
+		F464F037250F3445002F1BD2 /* 二叉排序树 */ = {
+			isa = PBXGroup;
+			children = (
+				F464F040250F36E5002F1BD2 /* 队列 */,
+				F464F03F250F36E5002F1BD2 /* Node.swift */,
+				F464F044250F36E5002F1BD2 /* Stack.swift */,
+				F464F038250F3445002F1BD2 /* main.swift */,
+				F464F04C250F3707002F1BD2 /* BiSearchTree.swift */,
+			);
+			path = "二叉排序树";
+			sourceTree = "<group>";
+		};
+		F464F040250F36E5002F1BD2 /* 队列 */ = {
+			isa = PBXGroup;
+			children = (
+				F464F041250F36E5002F1BD2 /* LinkedNode.swift */,
+				F464F042250F36E5002F1BD2 /* Queue.swift */,
+				F464F043250F36E5002F1BD2 /* LinkedList.swift */,
+			);
+			path = "队列";
+			sourceTree = "<group>";
+		};
 		F465E7D925008389009E75D0 /* 双端队列 */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,15 +391,6 @@
 				F46D535B2508CD7D000F43C0 /* LinkedNode.swift */,
 			);
 			path = "队列";
-			sourceTree = "<group>";
-		};
-		F48FFE5D2501D5810052ED55 /* 搜索二叉树 */ = {
-			isa = PBXGroup;
-			children = (
-				F48FFE5E2501D5810052ED55 /* main.swift */,
-				F48FFE632501D64D0052ED55 /* Node.swift */,
-			);
-			path = "搜索二叉树";
 			sourceTree = "<group>";
 		};
 		F4B8FA4A24FF62740015ADA3 /* 数组 */ = {
@@ -402,11 +425,11 @@
 		F4C7F2C42505D2EA00E1630A /* 二叉树 */ = {
 			isa = PBXGroup;
 			children = (
+				F464F03D250F3552002F1BD2 /* Stack.swift */,
 				F46D53582508CCFC000F43C0 /* 队列 */,
 				F4C7F2C52505D2EA00E1630A /* main.swift */,
 				F4C7F2CA2505D39E00E1630A /* Node.swift */,
 				F486A66025072EB000C5480C /* BiTree.swift */,
-				F486A6682507790B00C5480C /* Stack.swift */,
 			);
 			path = "二叉树";
 			sourceTree = "<group>";
@@ -434,8 +457,8 @@
 				F426416924FDE46A00A0C341 /* 队列 */,
 				F465E7D925008389009E75D0 /* 双端队列 */,
 				F4B8FA4A24FF62740015ADA3 /* 数组 */,
-				F48FFE5D2501D5810052ED55 /* 搜索二叉树 */,
 				F4C7F2C42505D2EA00E1630A /* 二叉树 */,
+				F464F037250F3445002F1BD2 /* 二叉排序树 */,
 				F4EA8D4E24CFB6B400B232E9 /* Products */,
 				F402027C24F8E672007D5C93 /* todo.md */,
 			);
@@ -455,8 +478,8 @@
 				F4B8FA4924FF62740015ADA3 /* 数组 */,
 				F465E7CD2500834D009E75D0 /* 双向队列 */,
 				F465E7D825008389009E75D0 /* 双端队列 */,
-				F48FFE5C2501D5810052ED55 /* 搜索二叉树 */,
 				F4C7F2C32505D2EA00E1630A /* 二叉树 */,
+				F464F036250F3445002F1BD2 /* 二叉排序树 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -532,6 +555,23 @@
 			productReference = F426416824FDE46A00A0C341 /* 队列 */;
 			productType = "com.apple.product-type.tool";
 		};
+		F464F035250F3445002F1BD2 /* 二叉排序树 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F464F03A250F3445002F1BD2 /* Build configuration list for PBXNativeTarget "二叉排序树" */;
+			buildPhases = (
+				F464F032250F3445002F1BD2 /* Sources */,
+				F464F033250F3445002F1BD2 /* Frameworks */,
+				F464F034250F3445002F1BD2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "二叉排序树";
+			productName = "二叉排序树";
+			productReference = F464F036250F3445002F1BD2 /* 二叉排序树 */;
+			productType = "com.apple.product-type.tool";
+		};
 		F465E7CC2500834D009E75D0 /* 双向队列 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F465E7D32500834E009E75D0 /* Build configuration list for PBXNativeTarget "双向队列" */;
@@ -564,23 +604,6 @@
 			name = "双端队列";
 			productName = "双端队列";
 			productReference = F465E7D825008389009E75D0 /* 双端队列 */;
-			productType = "com.apple.product-type.tool";
-		};
-		F48FFE5B2501D5810052ED55 /* 搜索二叉树 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F48FFE622501D5810052ED55 /* Build configuration list for PBXNativeTarget "搜索二叉树" */;
-			buildPhases = (
-				F48FFE582501D5810052ED55 /* Sources */,
-				F48FFE592501D5810052ED55 /* Frameworks */,
-				F48FFE5A2501D5810052ED55 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "搜索二叉树";
-			productName = "搜索二叉树";
-			productReference = F48FFE5C2501D5810052ED55 /* 搜索二叉树 */;
 			productType = "com.apple.product-type.tool";
 		};
 		F4B8FA4824FF62740015ADA3 /* 数组 */ = {
@@ -721,13 +744,13 @@
 					F426416724FDE46A00A0C341 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
+					F464F035250F3445002F1BD2 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					F465E7CC2500834D009E75D0 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 					F465E7D725008389009E75D0 = {
-						CreatedOnToolsVersion = 11.3.1;
-					};
-					F48FFE5B2501D5810052ED55 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 					F4B8FA4824FF62740015ADA3 = {
@@ -777,8 +800,8 @@
 				F4B8FA4824FF62740015ADA3 /* 数组 */,
 				F465E7CC2500834D009E75D0 /* 双向队列 */,
 				F465E7D725008389009E75D0 /* 双端队列 */,
-				F48FFE5B2501D5810052ED55 /* 搜索二叉树 */,
 				F4C7F2C22505D2EA00E1630A /* 二叉树 */,
+				F464F035250F3445002F1BD2 /* 二叉排序树 */,
 			);
 		};
 /* End PBXProject section */
@@ -813,6 +836,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F464F032250F3445002F1BD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F464F039250F3445002F1BD2 /* main.swift in Sources */,
+				F464F047250F36E5002F1BD2 /* LinkedNode.swift in Sources */,
+				F464F049250F36E5002F1BD2 /* LinkedList.swift in Sources */,
+				F464F046250F36E5002F1BD2 /* Node.swift in Sources */,
+				F464F04A250F36E5002F1BD2 /* Stack.swift in Sources */,
+				F464F04D250F3707002F1BD2 /* BiSearchTree.swift in Sources */,
+				F464F048250F36E5002F1BD2 /* Queue.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F465E7C92500834D009E75D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -828,15 +865,6 @@
 				F465E7DB25008389009E75D0 /* main.swift in Sources */,
 				F465E7E2250083E1009E75D0 /* Node.swift in Sources */,
 				F465E7E4250083E1009E75D0 /* Queue.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F48FFE582501D5810052ED55 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F48FFE5F2501D5810052ED55 /* main.swift in Sources */,
-				F48FFE642501D64D0052ED55 /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -875,8 +903,8 @@
 			files = (
 				F46D535A2508CD6A000F43C0 /* LinkedList.swift in Sources */,
 				F46D535C2508CD7D000F43C0 /* LinkedNode.swift in Sources */,
+				F464F03E250F3552002F1BD2 /* Stack.swift in Sources */,
 				F46D53572508CCA9000F43C0 /* Queue.swift in Sources */,
-				F486A6692507790B00C5480C /* Stack.swift in Sources */,
 				F4C7F2C62505D2EA00E1630A /* main.swift in Sources */,
 				F4C7F2CB2505D39E00E1630A /* Node.swift in Sources */,
 				F486A66125072EB000C5480C /* BiTree.swift in Sources */,
@@ -967,6 +995,24 @@
 			};
 			name = Release;
 		};
+		F464F03B250F3445002F1BD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F464F03C250F3445002F1BD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		F465E7D12500834E009E75D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -995,24 +1041,6 @@
 			name = Debug;
 		};
 		F465E7DE25008389009E75D0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		F48FFE602501D5810052ED55 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		F48FFE612501D5810052ED55 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -1290,6 +1318,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		F464F03A250F3445002F1BD2 /* Build configuration list for PBXNativeTarget "二叉排序树" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F464F03B250F3445002F1BD2 /* Debug */,
+				F464F03C250F3445002F1BD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F465E7D32500834E009E75D0 /* Build configuration list for PBXNativeTarget "双向队列" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1304,15 +1341,6 @@
 			buildConfigurations = (
 				F465E7DD25008389009E75D0 /* Debug */,
 				F465E7DE25008389009E75D0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F48FFE622501D5810052ED55 /* Build configuration list for PBXNativeTarget "搜索二叉树" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F48FFE602501D5810052ED55 /* Debug */,
-				F48FFE612501D5810052ED55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
