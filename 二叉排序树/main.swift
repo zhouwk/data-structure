@@ -42,11 +42,11 @@ tree.postOrderTravelUsingStack()
 
 print("\n---------构建新树--------")
 tree = BiSearchTree(10)
-for nodeValue in [5, 4, 3, 8, 9] {
+for nodeValue in [5, 4, 3, 8, 7, 9] {
     tree.insert(nodeValue)
 }
 print("\n---------删除节点--------")
-tree.delete(8)
+tree.delete(5)
 print("---------前序(递归)--------")
 tree.preOrderTravelRecursively(node: tree.root!)
 print("\n---------前序(栈)--------")
@@ -65,6 +65,13 @@ tree.postOrderTravelUsingStack()
 print("\n---------层序遍历(队列)--------")
 tree.levelOrderTravelUsingQueue()
 print("\n")
+
+
+
+tree.root?.lChild?.value = 700
+
+
+print(tree.isBiSearchTree())
 
 
 
