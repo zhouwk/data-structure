@@ -11,8 +11,7 @@ import Foundation
 
 class BiSearchTree<T: Comparable> {
     
-    var root: Node<T>
-    
+    var root: Node<T>?
     
     init(_ value: T) {
         self.root = Node(value)
@@ -21,7 +20,7 @@ class BiSearchTree<T: Comparable> {
     /// 插入节点
     func insert(_ value: T) {
         let newNode = Node(value)
-        var cursor: Node? = root
+        var cursor = root
         while true {
             if value == cursor!.value {
                 cursor!.value = value
@@ -48,7 +47,6 @@ class BiSearchTree<T: Comparable> {
     /// 待删除节点度为0、1、2三种情况需要单独处理
     /// - Parameter value: 待删除节点的值
     func delete(_ value: T) {
-        
         // 1. 确定目标节点的节点信息
         var target: Node<T>?
         var targetType: ChildType?
@@ -61,16 +59,39 @@ class BiSearchTree<T: Comparable> {
         // 2. 替换逻辑
         
         // 2.1 类似链表的虚拟头结点，设置虚拟根节点简化操作(当target == root的情况)
-        let vRoot = parent ?? Node(root.value)
-        vRoot.lChild = root
-        if target === root {
-            parent = vRoot
-        }
+        parent = parent ?? Node(root!.value)
         if deleted.childCount == 0 {
-            
+            if deleted === root {
+                root = nil
+            } else if targetType == .left {
+                parent?.lChild = nil
+            } else {
+                parent?.rChild = nil
+            }
+        } else if deleted.childCount == 1 {
+            let grandson = deleted.lChild ?? deleted.rChild
+            if deleted === root {
+                root = grandson
+            } else if targetType == .left {
+                parent?.lChild = grandson
+            } else {
+                parent?.rChild = grandson
+            }
+        } else {
+            var successor = deleted.rChild
+            var successorParent = deleted
+            while successor!.rChild != nil {
+                successorParent = successor!
+                successor = successor!.rChild
+            }
+            deleted.value = successor!.value
+            if !successor!.hasChild {
+                successor?.lChild = nil
+            }
         }
     }
     
+//    type的定义有问题
     
     /// 定位值为value的节点
     /// - Parameters:
@@ -80,14 +101,14 @@ class BiSearchTree<T: Comparable> {
     ///   - parent: 目标节点的父节点
     func locateValue(_ value: T, target: inout Node<T>?, type: inout ChildType?,
                      parent: inout Node<T>?) {
-        if root.value == value {
+        if root == nil || root?.value == value {
             target = root
             type = nil
             parent = nil
             return
         }
         let queue = Queue<Node<T>>()
-        queue.enQueue(root)
+        queue.enQueue(root!)
         while !queue.isEmpty {
             if let lChild = queue.head?.lChild {
                 if lChild.value == value {
@@ -161,7 +182,7 @@ class BiSearchTree<T: Comparable> {
     /// 使用栈进行中序遍历
     func inOrderTravelUsingStack() {
         let stack = Stack<Node<T>>()
-        var cursor: Node? = root
+        var cursor = root
         while cursor != nil || !stack.isEmpty {
             if cursor != nil {
                 stack.push(cursor!)
@@ -181,6 +202,9 @@ class BiSearchTree<T: Comparable> {
     
     /// 层序遍历(使用队列)
     func levelOrderTravelUsingQueue() {
+        guard let root = root else {
+            return
+        }
         let queue = Queue<Node<T>>()
         queue.enQueue(root)
         while queue.head != nil {
@@ -193,6 +217,31 @@ class BiSearchTree<T: Comparable> {
             }
             _ = queue.deQueue()
         }
+    }
+    
+    /// 是否是二叉排序树
+    func isBiSearchTree() -> Bool {
+        guard let root = root else {
+            return true
+        }
+        let queue = Queue<Node<T>>()
+        queue.enQueue(root)
+        while queue.head != nil {
+            if queue.head!.lChild != nil {
+                if queue.head!.value <=  queue.head!.lChild!.value {
+                    return false
+                }
+                queue.enQueue(queue.head!.lChild!)
+            }
+            if queue.head!.rChild != nil {
+                if queue.head!.value >=  queue.head!.rChild!.value {
+                    return false
+                }
+                queue.enQueue(queue.head!.rChild!)
+            }
+            _ = queue.deQueue()
+        }
+        return true
     }
     
     let terminator = "   "
