@@ -8,12 +8,6 @@
 
 import Foundation
 
-enum ChildType {
-    case left
-    case right
-}
-
-
 class Node<T: Comparable> {
     var value: T
     

@@ -44,93 +44,62 @@ class BiSearchTree<T: Comparable> {
     
     
     /// 删除节点(详细笔记可见？？)
-    /// 待删除节点度为0、1、2三种情况需要单独处理
+    ///
     /// - Parameter value: 待删除节点的值
     func delete(_ value: T) {
         // 1. 确定目标节点的节点信息
-        var target: Node<T>?
-        var targetType: ChildType?
-        var parent: Node<T>?
-        locateValue(value, target: &target, type: &targetType, parent: &parent)
-        guard let deleted = target else {
+        let targetInfo = locateValue(value)
+        guard let target = targetInfo.target else {
             print("不存在value = \(value)的节点")
             return
         }
-        // 2. 替换逻辑
-        
-        // 2.1 类似链表的虚拟头结点，设置虚拟根节点简化操作(当target == root的情况)
-        parent = parent ?? Node(root!.value)
-        if deleted.childCount == 0 {
-            if deleted === root {
-                root = nil
-            } else if targetType == .left {
-                parent?.lChild = nil
-            } else {
-                parent?.rChild = nil
+        let parent = targetInfo.parent
+        // 2. 删除逻辑
+        if target.childCount == 2 {
+            // 需要找到target的直接后继和直接后继的父节点
+            var successor = target.rChild
+            var successorParent = target
+            while successor!.lChild != nil {
+                successorParent = successor!
+                successor = successor!.lChild
             }
-        } else if deleted.childCount == 1 {
-            let grandson = deleted.lChild ?? deleted.rChild
-            if deleted === root {
-                root = grandson
-            } else if targetType == .left {
-                parent?.lChild = grandson
+            target.value = successor!.value
+            let successorChild = successor?.lChild ?? successor?.rChild
+            if successor === successorParent.lChild {
+                successorParent.lChild = successorChild
             } else {
-                parent?.rChild = grandson
+                successorParent.rChild = successorChild
             }
         } else {
-            var successor = deleted.rChild
-            var successorParent = deleted
-            while successor!.rChild != nil {
-                successorParent = successor!
-                successor = successor!.rChild
-            }
-            deleted.value = successor!.value
-            if !successor!.hasChild {
-                successor?.lChild = nil
+            // target的度为0或者1
+            let child = target.lChild ?? target.rChild
+            if target === root {
+                root = child
+            } else if target === parent?.lChild {
+                parent?.lChild = child
+            } else {
+                parent?.rChild = child
             }
         }
     }
     
-//    type的定义有问题
     
     /// 定位值为value的节点
-    /// - Parameters:
-    ///   - value: 目标值
-    ///   - target: 目标节点
-    ///   - type: 目标节点是父节点的lChild  or  rChild
-    ///   - parent: 目标节点的父节点
-    func locateValue(_ value: T, target: inout Node<T>?, type: inout ChildType?,
-                     parent: inout Node<T>?) {
-        if root == nil || root?.value == value {
-            target = root
-            type = nil
-            parent = nil
-            return
-        }
-        let queue = Queue<Node<T>>()
-        queue.enQueue(root!)
-        while !queue.isEmpty {
-            if let lChild = queue.head?.lChild {
-                if lChild.value == value {
-                    target = lChild
-                    parent = queue.head
-                    type = .left
-                    break
-                }
-                queue.enQueue(lChild)
+    func locateValue(_ value: T) -> (target: Node<T>?, parent: Node<T>?) {
+        var cursor = root
+        var parent: Node<T>?
+        while cursor != nil {
+            if cursor!.value == value {
+                break
             }
-            
-            if let rChild = queue.head?.rChild {
-                if rChild.value == value {
-                    target = rChild
-                    parent = queue.head
-                    type = .right
-                    break
-                }
-                queue.enQueue(rChild)
+            parent = cursor
+            if cursor!.value > value {
+                cursor = cursor?.lChild
+            } else {
+                cursor = cursor?.rChild
             }
-            queue.deQueue()
         }
+        return (cursor, cursor == nil ? nil : parent)
     }
     
     /// 递归前序遍历
